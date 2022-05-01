@@ -4,9 +4,8 @@ import 'package:rjc_codelab_1/models/category_model.dart';
 import 'package:rjc_codelab_1/repositories/category_repo.dart';
 
 class AppCategoryList extends StatelessWidget {
-  AppCategoryList({Key? key, required this.items}) : super(key: key);
+  AppCategoryList({Key? key}) : super(key: key);
 
-  final CategoryRepo items;
   final ScrollController _controller = ScrollController();
 
   @override
@@ -45,9 +44,9 @@ class AppCategoryList extends StatelessWidget {
               child: ListView.builder(
                 controller: _controller,
                 scrollDirection: Axis.horizontal,
-                itemCount: items.categories.length,
+                itemCount: CategoryRepo.categories.length,
                 itemBuilder: (_, index) {
-                  CategoryModel currentCategory = items.categories[index];
+                  CategoryModel currentCategory = CategoryRepo.categories[index];
 
                   return Container(
                     width: 100,

@@ -1,18 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:rjc_codelab_1/repositories/category_repo.dart';
 
 import '../../constant/colors.dart';
-import '../../repositories/mount_repo.dart';
-import '../widgets/app_category_list.dart';
-import '../widgets/app_header.dart';
-import '../widgets/app_mount_listview.dart';
-import '../widgets/app_search.dart';
+import '../widgets/widgets.dart';
 
 class MountsApp extends StatelessWidget {
-  MountsApp({Key? key}) : super(key: key);
-
-  final MountRepo _mountRepo = MountRepo();
-  final CategoryRepo _categoryRepo = CategoryRepo();
+  const MountsApp({Key? key}) : super(key: key);
 
   @override
   Widget build(context) {
@@ -44,14 +36,9 @@ class MountsApp extends StatelessWidget {
         children: [
           const AppHeader(),
           const AppSearch(),
-          Expanded(
-            child: AppMountListView(
-              items: _mountRepo,
-            ),
-          ),
-          AppCategoryList(
-            items: _categoryRepo,
-          ),
+          Expanded(child: AppMountListView()),
+          AppCategoryList(),
+          const AppBottomBar(),
         ],
       ),
     );

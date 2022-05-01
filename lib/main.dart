@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'views/screens/home_screen.dart';
+import 'views/screens/splash_screen.dart';
 
 void main() {
   runApp(
-    MaterialApp(
-      home: MountsApp(), // SplashPage(),
+    const MaterialApp(
+      home: SplashPage(),
     ),
   );
 }

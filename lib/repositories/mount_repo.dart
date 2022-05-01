@@ -1,7 +1,7 @@
 import '../models/mount_model.dart';
 
-class MountRepo {
-  final List<MountModel> mountItems = [
+abstract class MountRepo {
+  static final List<MountModel> mountItems = [
     MountModel(
         path:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sumberurip_Pronojiwo_%28cropped%29.jpg/1024px-Sumberurip_Pronojiwo_%28cropped%29.jpg',

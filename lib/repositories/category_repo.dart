@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rjc_codelab_1/models/category_model.dart';
 
-class CategoryRepo {
-  final List<CategoryModel> categories = [
+abstract class CategoryRepo {
+  static List<CategoryModel> categories = [
     CategoryModel(category: 'Mountain', icon: Icons.terrain),
     CategoryModel(category: 'Forest', icon: Icons.park),
     CategoryModel(category: 'Beach', icon: Icons.beach_access),

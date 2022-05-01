@@ -4,9 +4,8 @@ import '../../models/mount_model.dart';
 import '../../repositories/mount_repo.dart';
 
 class AppMountListView extends StatelessWidget {
-  AppMountListView({Key? key, required this.items}) : super(key: key);
+  AppMountListView({Key? key}) : super(key: key);
 
-  final MountRepo items;
   final ScrollController controller = ScrollController();
 
   @override
@@ -18,9 +17,9 @@ class AppMountListView extends StatelessWidget {
         child: ListView.builder(
           controller: controller,
           scrollDirection: Axis.horizontal,
-          itemCount: items.mountItems.length,
+          itemCount: MountRepo.mountItems.length,
           itemBuilder: (_, index) {
-            MountModel currentMount = items.mountItems[index];
+            MountModel currentMount = MountRepo.mountItems[index];
       
             return Container(
               alignment: Alignment.bottomLeft,
