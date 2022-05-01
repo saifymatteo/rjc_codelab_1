@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rjc_codelab_1/constant/colors.dart';
 
-import 'home_screen.dart';
+import 'home_page.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -10,7 +10,7 @@ class SplashPage extends StatelessWidget {
   Widget build(context) {
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => MountsApp()));
+          .push(MaterialPageRoute(builder: (context) => const MountsApp()));
     });
 
     return Container(
